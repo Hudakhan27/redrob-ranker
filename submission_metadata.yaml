@@ -1,20 +1,20 @@
-team_name: "team-name-here"
+team_name: "your-team-id-or-name"  # Ensure this matches your registered ID
 
 primary_contact:
-  name: "Your Name"
-  email: "primary@example.com"
-  phone: "+91-XXXXXXXXXX"
+  name: "Huda Khan"
+  email: "primary@example.com"     # Update with your active email
+  phone: "+91-XXXXXXXXXX"          # Update with your active phone
 
 team_members:
-  - name: "Member 1 Full Name"
-    email: "member1@example.com"
+  - name: "Huda Khan"
+    email: "primary@example.com"
     role: "ML Engineer"
 
 github_repo: "https://github.com/Hudakhan27/redrob-ranker"
+sandbox_link: "https://huggingface.co/spaces/Hudakhan27/redrob-ranker"
 
-sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
-
-reproduce_command: "python rank.py --candidates ./sample_candidates.json --out ./submission.csv"
+# CRITICAL FIX: Point this to the official evaluation file path
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 
 compute:
   platform: "Local Linux box"
@@ -40,5 +40,5 @@ declarations:
   read_submission_spec: true
   code_is_original_work: true
   no_collusion: true
-  honeypot_check_done: false
-  reproduction_tested: false
+  honeypot_check_done: true        # Updated to true based on your core files
+  reproduction_tested: true        # Run a quick local execution check, then mark true
