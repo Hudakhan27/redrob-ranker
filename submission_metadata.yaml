@@ -1,0 +1,44 @@
+team_name: "team-name-here"
+
+primary_contact:
+  name: "Your Name"
+  email: "primary@example.com"
+  phone: "+91-XXXXXXXXXX"
+
+team_members:
+  - name: "Member 1 Full Name"
+    email: "member1@example.com"
+    role: "ML Engineer"
+
+github_repo: "https://github.com/Hudakhan27/redrob-ranker"
+
+sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
+
+reproduce_command: "python rank.py --candidates ./sample_candidates.json --out ./submission.csv"
+
+compute:
+  platform: "Local Linux box"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.10.0"
+  os: "Ubuntu 22.04 LTS"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "GitHub Copilot"
+
+ai_usage_summary: |
+  Used GitHub Copilot to scaffold the repository and implement the ranking logic.
+
+methodology_summary: |
+  Rule-based ranker with explicit reasoning capture. Five scoring components (title match, experience, skills, behavioral signals, availability) combined with a weighted average. The title component guards against keyword-stuffer traps; skills are validated against career timeline for honeypot detection.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: false
+  reproduction_tested: false
